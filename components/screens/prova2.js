@@ -5,7 +5,7 @@ export default function Prova2() {
   return (
     <View style={styles.container}>
       
-        <Text style={[styles.title, styles.textCenter]}>DRAGON BALL</Text>
+        <Text style={[styles.title, styles.textCenter]}>dragon</Text>
         <Text style={[styles.atencao, styles.textCenter]}>Faça seu login abaixo para entrar no universo de Dragon Ball!</Text>
 
         <TextInput style={styles.input} placeholder='Email' />
