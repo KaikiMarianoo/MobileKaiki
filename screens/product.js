@@ -3,8 +3,7 @@ import { View, Text, FlatList, StyleSheet, Image } from 'react-native';
 import { useState, useEffect } from 'react';
 import { db } from './controller';
 import { collection, getDocs } from 'firebase/firestore';
-import { CardAnimationContext } from '@react-navigation/stack';
-
+import Card from '../components/card';
 
 export default function Product() {
   const [produtos, setProdutos] = useState([]);

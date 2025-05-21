@@ -8,16 +8,15 @@ import {getFirestore} from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB8xpG8r9E8Sr4it2OWHLxnCIO7ii_uaUU",
-  authDomain: "aulamobile2025.firebaseapp.com",
-  projectId: "aulamobile2025",
-  storageBucket: "aulamobile2025.firebasestorage.app",
-  messagingSenderId: "745457606355",
-  appId: "1:745457606355:web:57de6f207934c468b0fe26"
+  apiKey: "AIzaSyAMY0qfe5DXRhB6kDfICClsWwaj_NJJnI4",
+  authDomain: "aulasm2025.firebaseapp.com",
+  projectId: "aulasm2025",
+  storageBucket: "aulasm2025.firebasestorage.app",
+  messagingSenderId: "514456177250",
+  appId: "1:514456177250:web:94a49aaada4a384c471f3b"
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
-export const db=getFirestore(app);
+export const db = getFirestore(app);

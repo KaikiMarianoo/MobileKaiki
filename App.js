@@ -10,7 +10,7 @@ import Counter from './screens/counter';
 import Product from './screens/product';
 import Login from './screens/login';
 import Register from './screens/Register';
-import AddProduct from './screens/AddProducts';
+import AddProduct from './screens/AddProduct';
 
 function BottomTabs() {
   const BottomTab = createBottomTabNavigator();
@@ -52,7 +52,7 @@ function BottomTabs() {
       }}
       />
       <BottomTab.Screen
-      name="Adicionar Produto"
+      name="AdicionarProduto"
       component={AddProduct}
       options={{tabBarIcon:()=>< MaterialIcons name="Imagem novo produto"/>,
       }}

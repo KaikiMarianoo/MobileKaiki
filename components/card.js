@@ -1,11 +1,11 @@
 import {View,Text,Image,StyleSheet} from 'react-native';
 
-export default function Card({nome,preco,imagem}){
+export default function Card({nome,valor,imagem}){
     return(
         <View style={styles.card}>
             <Image source={{uri:imagem}} style={styles.image}/>
             <Text style={styles.text}>{nome}</Text>
-            <Text style={styles.text}>R$ {preco.toFixed(2)}</Text>
+            <Text style={styles.text}>R$ {valor.toFixed(2)}</Text>
         </View>
     );
 }
