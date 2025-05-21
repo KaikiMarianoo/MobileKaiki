@@ -1,11 +1,12 @@
-import {View,Text,Image,StyleSheet} from 'react-native';
+import {View,Text,Image,StyleSheet,Button} from 'react-native';
 
-export default function Card({nome,valor,imagem}){
+export default function Card({nome,valor,imagem,comprar}){
     return(
         <View style={styles.card}>
             <Image source={{uri:imagem}} style={styles.image}/>
             <Text style={styles.text}>{nome}</Text>
             <Text style={styles.text}>R$ {valor.toFixed(2)}</Text>
+            <Button title='Comprar' onPress={comprar}/>
         </View>
     );
 }

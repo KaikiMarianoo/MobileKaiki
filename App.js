@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { ProviderCart } from './components/ProviderCart';
 
 import Home from './screens/home';
 import Feed from './screens/feed';
@@ -11,6 +12,7 @@ import Product from './screens/product';
 import Login from './screens/login';
 import Register from './screens/Register';
 import AddProduct from './screens/AddProduct';
+import carrinho from './screens/carrinho';
 
 function BottomTabs() {
   const BottomTab = createBottomTabNavigator();
@@ -57,6 +59,12 @@ function BottomTabs() {
       options={{tabBarIcon:()=>< MaterialIcons name="Imagem novo produto"/>,
       }}
       />
+      <BottomTab.Screen
+      name="Carrinho"
+      component={carrinho}
+      options={{tabBarIcon:()=>< MaterialIcons name="Imagem Carrinho"/>,
+      }}
+      />
 
     </BottomTab.Navigator>
   );
@@ -66,13 +74,14 @@ export default function App() {
   const Stack = createStackNavigator();
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Product" component={Product} />
-        <Stack.Screen name="Register" component={Register} />
-        <Stack.Screen options={{ headerShown: false }} name="HomeTab" component={BottomTabs} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <ProviderCart>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Login">
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Register" component={Register} />
+          <Stack.Screen options={{ headerShown: false }} name="HomeTab" component={BottomTabs} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </ProviderCart>
   );
 }
